@@ -1,10 +1,10 @@
 // src/App.jsx
 import React from 'react'
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom'
-import Layout from './layout/Layout'
+import Layout from './layout/layout'
 
-import Home from './pages/Home'
-import List from './pages/List'
+import Home from './pages/home'
+import List from './pages/list'
 import VideoDetail from './pages/video_detail'
 
 export default function App() {
