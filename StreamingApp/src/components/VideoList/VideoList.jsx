@@ -1,5 +1,5 @@
 import React from 'react'
-import Card from '../Card/card'
+import Card from '../Card/Card'
 import './VideoList.css'
 
 export default function VideoList({ videos, openModal }) {
