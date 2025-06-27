@@ -1,0 +1,50 @@
+.search-bar__container {
+  position: relative;
+}
+
+.search-bar__suggestions {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  max-height: 300px;
+  overflow-y: auto;
+  background-color: #2e2e2e;
+  border-radius: 4px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  margin-top: 0.25rem;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  width: 100%;
+}
+
+.search-bar__suggestion-item {
+  display: flex;
+  align-items: center;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-bottom: 1px solid #444;
+  color: #f5f5f5;
+  width: 100%;
+  box-sizing: border-box; /* ¡clave para incluir padding en ancho */
+}
+
+.search-bar__suggestion-item:last-child {
+  border-bottom: none;
+}
+
+.search-bar__suggestion-item:hover,
+.search-bar__suggestion-item:focus {
+  background-color: #44475a;
+  outline: none;
+  width: 100%; /* asegúrate de que el hover cubra el 100% */
+}
+
+.search-bar__suggestion-thumbnail {
+  width: 40px;
+  height: auto;
+  border-radius: 4px;
+  margin-right: 10px;
+}

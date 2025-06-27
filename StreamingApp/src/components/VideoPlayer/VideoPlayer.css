@@ -1,0 +1,28 @@
+.video-player {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 10px;
+    background: #121212;
+    border-radius: 8px;
+    color: #fff;
+  }
+  
+  .video-player__title {
+    margin-bottom: 12px;
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  
+  .video-player__video {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    background-color: black;
+  }
+  
+  .video-player__no-video {
+    text-align: center;
+    font-style: italic;
+    color: #666;
+    margin-top: 40px;
+  }

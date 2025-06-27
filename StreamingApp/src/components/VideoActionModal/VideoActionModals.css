@@ -1,0 +1,6 @@
+.modal-dialog {
+  max-width: 600px;        /* ajusta según el tamaño deseado */
+  margin-left: auto !important;
+  margin-right: auto !important;
+  position: relative;
+}

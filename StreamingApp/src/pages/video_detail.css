@@ -1,0 +1,99 @@
+.vd-loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+  width: 100%;
+
+}
+
+.vd-container {
+  color: white;
+  padding: 2rem;
+  max-width: 900px;
+  margin: 2rem auto; /* Margen auto para centrar horizontalmente */
+  font-family: 'Inter', sans-serif;
+  background-color: #121212; /* fondo oscuro */
+  border-radius: 12px;
+  box-shadow: 0 0 25px rgba(255, 0, 0, 0.5); /* sombra roja suave */
+}
+
+.vd-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.2rem;
+  color: #d9534f; /* rojo oscuro */
+  text-align: center; /* centra el título */
+}
+
+.vd-year {
+  font-weight: 400;
+  color: #bbb;
+  font-size: 1.5rem;
+}
+
+.vd-director,
+.vd-duration {
+  font-size: 1rem;
+  margin-bottom: 0.3rem;
+  color: #ccc;
+  text-align: center; /* centra el texto debajo del título */
+}
+
+.vd-main {
+  display: flex;
+  flex-direction: column; /* 👈 Esto fuerza que el thumbnail esté arriba */
+  gap: 2rem;
+  margin-top: 2rem;
+  align-items: center; /* Centra los hijos */
+}
+
+.vd-thumbnail {
+  width: 300px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(217, 83, 79, 0.6);
+  flex-shrink: 0;
+}
+
+.vd-details {
+  flex: 1;
+  max-width: 500px;
+  font-size: 1.1rem;
+}
+
+.vd-details h2 {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  color: #d9534f;
+  border-bottom: 2px solid #d9534f;
+  padding-bottom: 0.3rem;
+}
+
+.vd-details ul {
+  list-style-type: disc;
+  padding-left: 1.2rem;
+  color: #eee;
+}
+
+.vd-watch-link {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.5rem 1rem;
+  background-color: #d9534f;
+  color: white;
+  font-weight: 600;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.vd-watch-link:hover {
+  background-color: #c9302c;
+}
+
+.vd-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
