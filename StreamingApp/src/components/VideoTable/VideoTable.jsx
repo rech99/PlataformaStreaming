@@ -1,5 +1,6 @@
+// src/components/VideoTable/VideoTable.jsx
 import React, { useState, useMemo } from 'react'
-import useVideos from '../../hooks/useVideos'
+
 import './VideoTable.css'
 import VideoActionModal from '../VideoActionModal/VideoActionModal'
 import ConfirmationModal from '../ConfirmationModal/ConfirmationModal'
@@ -7,8 +8,9 @@ import Modal from 'bootstrap/js/dist/modal'
 import LoadingIcon from '../LoadingIcon/LoadingIcon'
 import { useNavigate } from 'react-router-dom'
 
-export default function VideoTable() {
-  const { videos, loading, error } = useVideos()
+
+export default function VideoTable({ videos = [], loading = true, error = null }) {
+
   const [selectedVideo, setSelectedVideo] = useState(null)
   const [actionType, setActionType] = useState('')
   const [showConfirmation, setShowConfirmation] = useState(false)
@@ -22,7 +24,8 @@ export default function VideoTable() {
     return videos.slice(startIndex, endIndex)
   }, [videos, currentPage])
 
-  const totalPages = Math.ceil(videos.length / videosPerPage)
+
+  const totalPages = Math.ceil((videos ? videos.length : 0) / videosPerPage)
 
   const goToPage = (pageNum) => {
     if (pageNum >= 1 && pageNum <= totalPages) {
@@ -69,6 +72,7 @@ export default function VideoTable() {
     setSelectedVideo(null)
     setActionType('')
   }
+
 
   if (loading) return <div className="loading-container"> <LoadingIcon /> </div>
   if (error) return <p>Error cargando videos: {error.message}</p>

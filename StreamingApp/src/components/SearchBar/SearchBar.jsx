@@ -54,7 +54,7 @@ export default function SearchBar({ videos = [] }) {
     e.preventDefault()
     if (!query.trim()) return
     setShowSuggestions(false)
-    navigate(`/resultados?query=${encodeURIComponent(query.trim())}`)
+    navigate(`/search?query=${encodeURIComponent(query.trim())}`)
   }
 
   return (

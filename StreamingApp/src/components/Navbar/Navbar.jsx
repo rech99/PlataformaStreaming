@@ -1,19 +1,25 @@
-import React from 'react'
-import { Link, NavLink } from 'react-router-dom' 
-import SearchBar from '../SearchBar/SearchBar'
-import './Navbar.css'
-import useVideos from '../../hooks/useVideos'
+// src/components/Navbar/Navbar.jsx
+import React from 'react';
+import { Link, NavLink } from 'react-router-dom';
+import SearchBar from '../SearchBar/SearchBar';
+import './Navbar.css';
+// ¡Elimina esta importación! useVideos ya no se llama aquí
+// import useVideos from '../../hooks/useVideos';
 
-export default function Navbar() {
-  const { videos, loading, error } = useVideos()
-
+// MODIFICACIÓN: Navbar ahora recibe las props: allVideos, loading y error
+export default function Navbar({ allVideos = [], loading = true, error = null }) {
+  // ¡Elimina esta línea! Los datos vienen de las props
+  // const { videos, loading, error } = useVideos();
 
   const handleSearch = (query) => {
-    console.log('Buscar:', query)
-  }
+    console.log('Buscar:', query);
+  };
 
-  if (loading) return <p>Cargando...</p>
-  if (error) return <p>Error al cargar videos</p>
+  // Puedes decidir si quieres mostrar un estado de carga o error en la barra de navegación.
+  // Generalmente, no se bloquea toda la navegación por la carga de videos,
+  // pero aquí tienes las comprobaciones si las necesitas.
+  if (loading) return <p>Cargando navegación...</p>;
+  if (error) return <p>Error en navegación</p>;
 
   return (
     <header className="navbar">
@@ -43,9 +49,10 @@ export default function Navbar() {
             </NavLink>
           </nav>
 
-          <SearchBar videos={videos || []} onSearch={handleSearch} />
+          {/* MODIFICACIÓN: Pasa 'allVideos' a SearchBar. SearchBar espera una prop 'videos'. */}
+          <SearchBar videos={allVideos || []} onSearch={handleSearch} />
         </div>
       </div>
     </header>
-  )
+  );
 }
