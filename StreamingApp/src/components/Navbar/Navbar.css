@@ -17,7 +17,7 @@
   font-size: 1.8rem;
   color: white;
   text-decoration: none;
-  flex-shrink: 0; 
+  flex-shrink: 0;
   transition: transform 0.3s ease-out, color 0.3s ease;
 }
 
@@ -74,4 +74,73 @@
   font-weight: bold;
   border-radius: 4px;
   cursor: pointer;
+}
+
+/* ------------------------------------------- */
+/* Media Queries para Responsive     */
+/* ------------------------------------------- */
+
+/* Para pantallas más pequeñas (máximo 768px - tablets y móviles) */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 10px 20px !important; /* Reduce el padding en pantallas pequeñas */
+  }
+
+  .navbar__container {
+    flex-wrap: wrap; /* Permite que los elementos salten de línea */
+    justify-content: center; /* Centra los elementos al apilarse */
+  }
+
+  .navbar__logo {
+    font-size: 1.5rem; /* Ajusta el tamaño del logo */
+    width: 100%; /* El logo ocupa todo el ancho */
+    text-align: center;
+    margin-bottom: 10px; /* Espacio debajo del logo */
+  }
+
+  .navbar__right {
+    flex-direction: column; /* Apila el menú y el buscador verticalmente */
+    width: 100%; /* Ocupa todo el ancho disponible */
+    gap: 15px; /* Reduce el espacio entre elementos */
+  }
+
+  .navbar__menu {
+    flex-direction: column; /* Apila los enlaces del menú verticalmente */
+    width: 100%;
+    gap: 10px; /* Reduce el espacio entre enlaces */
+    /* Opcional: Ocultar el menú por defecto para un botón de hamburguesa */
+    /* display: none; */
+    /* background-color: rgba(139, 0, 0, 0.9); */ /* Fondo para el menú expandido */
+    /* padding: 10px 0; */
+    /* border-radius: 4px; */
+  }
+
+  .navbar__link {
+    width: 100%; /* Los enlaces ocupan todo el ancho del menú */
+    text-align: center;
+  }
+
+  .search-bar {
+    width: 100%; /* El buscador ocupa todo el ancho */
+    justify-content: center; /* Centra el buscador */
+  }
+
+  .search-bar__input {
+    width: 70%; /* Ajusta el ancho del input de búsqueda */
+  }
+}
+
+/* Para pantallas muy pequeñas (máximo 480px - móviles) */
+@media (max-width: 480px) {
+  .navbar {
+    padding: 8px 15px !important;
+  }
+
+  .navbar__logo {
+    font-size: 1.3rem;
+  }
+
+  .search-bar__input {
+    width: 60%; /* Más ajuste para el input en pantallas muy pequeñas */
+  }
 }
