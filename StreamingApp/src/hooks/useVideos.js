@@ -63,7 +63,7 @@ function useVideos() {
             ],
             synopsis: 'Un hacker descubre la verdad sobre su realidad.',
             thumbnail: 'https://filmartgallery.com/cdn/shop/products/The-Matrix-Vintage-Movie-Poster-Original.jpg?v=1738903563',
-            url: 'https://www.youtube.com/watch?v=vKQi3bpH7Wo',
+            url: 'https://www.youtube.com/watch?v=vKQi3bBA1y8',
           },
           {
             id: '5',
@@ -132,7 +132,7 @@ function useVideos() {
               "Una actuación inolvidable de Heath Ledger",
             ],
             synopsis: 'Batman enfrenta al Joker en Gotham City.',
-            thumbnail: 'https://img.youtube.com/vi/EXeTwQWrcwY/0.jpg',
+            thumbnail: 'https://m.media-amazon.com/images/I/81IfoBox2TL.jpg',
             url: 'https://www.youtube.com/watch?v=EXeTwQWrcwY',
           },
           {
@@ -174,8 +174,8 @@ function useVideos() {
               "Una actuación magistral de Anthony Hopkins",
             ],
             synopsis: 'Una joven agente del FBI busca la ayuda de un asesino encarcelado.',
-            thumbnail: 'https://img.youtube.com/vi/ZWxL3g8d9aY/0.jpg',
-            url: 'https://www.youtube.com/watch?v=ZWxL3g8d9aY',
+            thumbnail: 'https://m.media-amazon.com/images/I/61o-mUgN++L._AC_SY879_.jpg',
+            url: 'https://www.youtube.com/watch?v=6iB21hsprAQ',
           },
           {
             id: '13',
@@ -188,8 +188,8 @@ function useVideos() {
               "Un viaje inolvidable a la Tierra Media",
             ],
             synopsis: 'Un grupo de héroes se embarca en una misión para destruir un anillo poderoso.',
-            thumbnail: 'https://img.youtube.com/vi/8bYB9d3k6a4/0.jpg',
-            url: 'https://www.youtube.com/watch?v=8bYB9d3k6a4',
+            thumbnail: 'https://m.media-amazon.com/images/I/81EBp0vOZZL.jpg',
+            url: 'https://www.youtube.com/watch?v=V75dMMIW2B4',
           },
           {
             id: '14',
@@ -202,7 +202,7 @@ function useVideos() {
               "Una crítica a la sociedad de consumo",
             ],
             synopsis: 'Un hombre insatisfecho con su vida forma un club de lucha clandestino.',
-            thumbnail: 'https://img.youtube.com/vi/qtRKdVHc-cE/0.jpg',
+            thumbnail: 'https://m.media-amazon.com/images/I/81D+KJkO4SL.jpg',
             url: 'https://www.youtube.com/watch?v=qtRKdVHc-cE',
           },
           {
@@ -216,7 +216,7 @@ function useVideos() {
               "Una historia de ambición y traición",
             ],
             synopsis: 'La historia de la creación de Facebook y sus controversias.',
-            thumbnail: 'https://img.youtube.com/vi/lB95KLmpLR4/0.jpg',
+            thumbnail: 'https://m.media-amazon.com/images/M/MV5BMjlkNTE5ZTUtNGEwNy00MGVhLThmZjMtZjU1NDE5Zjk1NDZkXkEyXkFqcGc@._V1_.jpg',
             url: 'https://www.youtube.com/watch?v=lB95KLmpLR4',
           },
           {
@@ -230,7 +230,7 @@ function useVideos() {
               "Una historia encantadora y divertida",
             ],
             synopsis: 'Las aventuras de un conserje de hotel y su aprendiz.',
-            thumbnail: 'https://img.youtube.com/vi/1Fg5iWmQjwk/0.jpg',
+            thumbnail: 'https://m.media-amazon.com/images/I/713kiC-8JhL._UF894,1000_QL80_.jpg',
             url: 'https://www.youtube.com/watch?v=1Fg5iWmQjwk',
           },
           {
@@ -244,8 +244,8 @@ function useVideos() {
               "Una película que desafía las expectativas",
             ],
             synopsis: 'La historia de dos familias de clases sociales opuestas.',
-            thumbnail: 'https://img.youtube.com/vi/5xHj8y5k3c4/0.jpg',
-            url: 'https://www.youtube.com/watch?v=5xHj8y5k3c4',
+            thumbnail: 'https://assets.mubicdn.net/images/notebook/post_images/29833/images-w1400.jpg?1579571205',
+            url: 'https://www.youtube.com/watch?v=5xH0HfJHsaY',
           },
           {
             id: '18',
@@ -258,7 +258,7 @@ function useVideos() {
               "Una historia mágica y conmovedora",
             ],
             synopsis: 'Una niña se pierde en un mundo espiritual y debe encontrar su camino a casa.',
-            thumbnail: 'https://img.youtube.com/vi/ByXuk9QqQkk/0.jpg',
+            thumbnail: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMs5tcwSdrUL1B5zpHs-d696v1MiiQoWt8wA&s',
             url: 'https://www.youtube.com/watch?v=ByXuk9QqQkk',
           },
           {
@@ -286,7 +286,7 @@ function useVideos() {
               "Un clásico de la ciencia ficción",
             ],
             synopsis: 'Un adolescente viaja al pasado y debe asegurarse de que sus padres se conozcan.',
-            thumbnail: 'https://img.youtube.com/vi/qvsgGtivCgs/0.jpg',
+            thumbnail: 'https://wallpapers.com/images/hd/back-to-the-future-1-movie-poster-3lt7w0va9gflvj87.jpg',
             url: 'https://www.youtube.com/watch?v=qvsgGtivCgs',
           },
             {
@@ -300,7 +300,7 @@ function useVideos() {
               "Una película llena de acción y humor",
             ],
             synopsis: 'Un grupo de superhéroes se une para salvar el mundo.',
-            thumbnail: 'https://img.youtube.com/vi/eOrNdBpGMv8/0.jpg',
+            thumbnail: 'https://wallpapers.com/images/featured/avengers-vm16xv4a69smdauy.jpg',
             url: 'https://www.youtube.com/watch?v=eOrNdBpGMv8',
             }
         ])

@@ -2,9 +2,6 @@
 
 :root {
   color-scheme: light dark;
-  color: rgba(245, 245, 245, 0.9); /* Blanco suave */
- 
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;

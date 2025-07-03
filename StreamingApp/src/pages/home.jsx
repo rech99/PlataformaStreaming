@@ -24,7 +24,7 @@ export default function Home({ allVideos = [], loading = true, error = null }) {
 
   return (
     <main>
-      <h1>Catalogo</h1>
+      <h1>Recientes</h1>
 
       {loading ? (
         <div className="loading-container">

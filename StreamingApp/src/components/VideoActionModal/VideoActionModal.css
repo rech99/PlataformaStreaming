@@ -1,0 +1,143 @@
+.modal-dialog.video-action-modal__dialog {
+    max-width: 450px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    position: relative !important;
+    transform: none !important;
+    top: auto !important;
+    left: auto !important;
+}
+
+.video-action-modal__content {
+    border-radius: 10px !important;
+    background-color: #2a2a2a !important;
+    color: #f5f5f5 !important;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5) !important;
+}
+
+.video-action-modal__header {
+    border-bottom: 1px solid #444 !important;
+    padding: 1.5rem !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+}
+
+.video-action-modal__title {
+    color: #e50914 !important;
+    font-weight: bold !important;
+    font-size: 1.5rem !important;
+    margin-bottom: 0 !important;
+}
+
+.video-action-modal__close-btn {
+    filter: invert(1) !important;
+    background: none !important;
+    border: none !important;
+    font-size: 1.5rem !important;
+    cursor: pointer !important;
+    padding: 0 !important;
+}
+
+.video-action-modal__body {
+    padding: 1.5rem !important;
+}
+
+.video-action-modal__body p strong {
+    color: #e50914 !important;
+}
+
+.video-action-modal__alert {
+    background-color: rgba(229, 9, 20, 0.2) !important;
+    border-color: #e50914 !important;
+    color: #f5f5f5 !important;
+    padding: 1rem !important;
+    border-radius: 5px !important;
+    margin-top: 1rem !important;
+    margin-bottom: 1rem !important;
+    font-size: 0.95rem !important;
+}
+
+.video-action-modal__form .form-label {
+    color: #cccccc !important;
+    font-size: 0.9rem !important;
+    margin-bottom: 0.25rem !important;
+}
+
+.video-action-modal__form .form-control {
+    background-color: #333 !important;
+    border: 1px solid #555 !important;
+    color: #f5f5f5 !important;
+    padding: 0.75rem 1rem !important;
+    border-radius: 5px !important;
+    font-size: 1rem !important;
+}
+
+.video-action-modal__form .form-control::placeholder {
+    color: #888 !important;
+}
+
+.video-action-modal__form .form-control:focus {
+    background-color: #3a3a3a !important;
+    border-color: #e50914 !important;
+    box-shadow: 0 0 0 0.25rem rgba(229, 9, 20, 0.25) !important;
+    color: #f5f5f5 !important;
+}
+
+.video-action-modal__form .form-control.is-invalid {
+    border-color: #dc3545 !important;
+    padding-right: calc(1.5em + 0.75rem) !important;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='12' height='12' fill='none' stroke='%23dc3545'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3e%3c/svg%3e") !important;
+    background-repeat: no-repeat !important;
+    background-position: right calc(0.375em + 0.1875rem) center !important;
+    background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem) !important;
+    box-shadow: 0 0 0 0.25rem rgba(220, 53, 69, 0.25) !important;
+}
+
+.video-action-modal__form .invalid-feedback {
+    display: block !important;
+    width: 100% !important;
+    margin-top: 0.25rem !important;
+    font-size: 0.875em !important;
+    color: #dc3545 !important;
+}
+
+.video-action-modal__footer {
+    border-top: 1px solid #444 !important;
+    padding: 1.5rem !important;
+    display: flex !important;
+    justify-content: flex-end !important;
+    gap: 1rem !important;
+}
+
+.video-action-modal__btn {
+    padding: 0.75rem 1.5rem !important;
+    border-radius: 5px !important;
+    font-weight: bold !important;
+    cursor: pointer !important;
+    transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out !important;
+}
+
+.video-action-modal__btn--secondary {
+    background-color: #555 !important;
+    border: 1px solid #555 !important;
+    color: #f5f5f5 !important;
+}
+
+.video-action-modal__btn--secondary:hover {
+    background-color: #666 !important;
+    border-color: #666 !important;
+}
+
+.video-action-modal__btn--primary {
+    background-color: #e50914 !important;
+    border: 1px solid #e50914 !important;
+    color: #ffffff !important;
+}
+
+.video-action-modal__btn--primary:hover {
+    background-color: #d40812 !important;
+    border-color: #d40812 !important;
+}
+
+

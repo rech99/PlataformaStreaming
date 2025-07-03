@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import useVideos from '../hooks/useVideos'
 import LoadingIcon from '../components/LoadingIcon/LoadingIcon'
@@ -8,30 +8,29 @@ import Modal from 'bootstrap/js/dist/modal'
 import './video_detail.css'
 
 export default function VideoDetail() {
+  // Todos los hooks aquí, sin condicionales:
   const { id } = useParams()
   const { videos, loading, error } = useVideos()
+
   const [selectedVideo, setSelectedVideo] = useState(null)
   const [actionType, setActionType] = useState('')
   const [showConfirmation, setShowConfirmation] = useState(false)
 
-  if (loading) return <div className="vd-loading-container"><LoadingIcon /></div>
-  if (error) return <p>Error al cargar el video: {error.message}</p>
-
+  // Siempre declarar hooks arriba, luego calcular video
   const video = videos.find(v => v.id === id)
 
-  if (!video) return <p>Video no encontrado</p>
+  // Uso de efecto para mostrar modal confirmación solo si showConfirmation cambia
+  useEffect(() => {
+    if (showConfirmation) {
+      const confirmModalEl = document.getElementById('confirmationModal')
+      if (confirmModalEl) {
+        const confirmModal = Modal.getOrCreateInstance(confirmModalEl)
+        confirmModal.show()
+      }
+    }
+  }, [showConfirmation])
 
-  const {
-    title,
-    director,
-    year,
-    duration,
-    reviews,
-    synopsis,
-    thumbnail,
-    url,
-  } = video
-
+  // Funciones de handlers
   const handleOpen = (video, action) => {
     setSelectedVideo(video)
     setActionType(action)
@@ -52,13 +51,7 @@ export default function VideoDetail() {
     if (modalInstance) {
       modalInstance.hide()
     }
-
-    setTimeout(() => {
-      setShowConfirmation(true)
-      const confirmModalEl = document.getElementById('confirmationModal')
-      const confirmModal = Modal.getOrCreateInstance(confirmModalEl)
-      confirmModal.show()
-    }, 300)
+    setShowConfirmation(true)
   }
 
   const handleCloseConfirmation = () => {
@@ -72,6 +65,22 @@ export default function VideoDetail() {
     setSelectedVideo(null)
     setActionType('')
   }
+
+  // Aquí solo condiciones de renderizado, no hooks ni estados
+  if (loading) return <div className="vd-loading-container"><LoadingIcon /></div>
+  if (error) return <p>Error al cargar el video: {error.message}</p>
+  if (!video) return <p>Video no encontrado</p>
+
+  const {
+    title,
+    director,
+    year,
+    duration,
+    reviews,
+    synopsis,
+    thumbnail,
+    url,
+  } = video
 
   return (
     <div className="vd-container">
@@ -137,3 +146,4 @@ export default function VideoDetail() {
     </div>
   )
 }
+

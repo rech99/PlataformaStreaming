@@ -1,5 +1,5 @@
 // src/components/VideoTable/VideoTable.jsx
-import React, { useState, useMemo } from 'react'
+import React, { useState, useMemo, useEffect } from 'react'
 
 import './VideoTable.css'
 import VideoActionModal from '../VideoActionModal/VideoActionModal'
@@ -7,6 +7,7 @@ import ConfirmationModal from '../ConfirmationModal/ConfirmationModal'
 import Modal from 'bootstrap/js/dist/modal'
 import LoadingIcon from '../LoadingIcon/LoadingIcon'
 import { useNavigate } from 'react-router-dom'
+
 
 
 export default function VideoTable({ videos = [], loading = true, error = null }) {
@@ -17,6 +18,7 @@ export default function VideoTable({ videos = [], loading = true, error = null }
   const navigate = useNavigate()
   const [currentPage, setCurrentPage] = useState(1)
   const videosPerPage = 10
+  const [shouldShowConfirmationModal, setShouldShowConfirmationModal] = useState(false);
 
   const currentVideos = useMemo(() => {
     const startIndex = (currentPage - 1) * videosPerPage
@@ -50,17 +52,23 @@ export default function VideoTable({ videos = [], loading = true, error = null }
   const handleConfirm = () => {
     const modalEl = document.getElementById('actionModal')
     const modalInstance = Modal.getInstance(modalEl)
-    if (modalInstance) {
-      modalInstance.hide()
-    }
+    if (modalInstance) modalInstance.hide()
 
-    setTimeout(() => {
-      setShowConfirmation(true)
-      const confirmModalEl = document.getElementById('confirmationModal')
-      const confirmModal = Modal.getOrCreateInstance(confirmModalEl)
-      confirmModal.show()
-    }, 300)
+    setSelectedVideo((prev) => ({ ...prev })) // Asegura que no se limpie antes
+    setShowConfirmation(true)
+    setShouldShowConfirmationModal(true)
   }
+
+  useEffect(() => {
+    if (shouldShowConfirmationModal) {
+      const confirmModalEl = document.getElementById('confirmationModal')
+      if (confirmModalEl) {
+        const confirmModal = Modal.getOrCreateInstance(confirmModalEl)
+        confirmModal.show()
+      }
+      setShouldShowConfirmationModal(false) // ya lo mostramos
+    }
+  }, [shouldShowConfirmationModal])
 
   const handleCloseConfirmation = () => {
     const confirmModalEl = document.getElementById('confirmationModal')
@@ -90,7 +98,7 @@ export default function VideoTable({ videos = [], loading = true, error = null }
           </tr>
         </thead>
         <tbody>
-          {currentVideos.map(({ id, title, thumbnail, year, synopsis }) => (
+          {currentVideos.map(({ id, title, thumbnail, year, synopsis, url }) => (
             <tr key={id} className="video-table__row">
               <td className="video-table__cell">{title}</td>
               <td className="video-table__cell">
@@ -111,13 +119,13 @@ export default function VideoTable({ videos = [], loading = true, error = null }
                 </button>
                 <button
                   className="video-table__button video-table__button--buy"
-                  onClick={() => handleOpen({ id, title }, 'comprar')}
+                  onClick={() => handleOpen({ id, title, url }, 'comprar')}
                 >
                   Comprar
                 </button>
                 <button
                   className="video-table__button video-table__button--rent"
-                  onClick={() => handleOpen({ id, title }, 'rentar')}
+                  onClick={() => handleOpen({ id, title, url }, 'rentar')}
                 >
                   Rentar
                 </button>

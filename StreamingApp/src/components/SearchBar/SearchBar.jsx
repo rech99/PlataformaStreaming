@@ -63,7 +63,7 @@ export default function SearchBar({ videos = [] }) {
         <input
           type="text"
           className="search-bar__input"
-          placeholder="Buscar videos..."
+          placeholder="Buscar peliculas..."
           value={query}
           onChange={e => setQuery(e.target.value)}
           aria-label="Buscar videos"
