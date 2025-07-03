@@ -5,7 +5,7 @@ import VideoList from '../components/VideoList/VideoList'
 import Slider from 'react-slick'
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
-import './Home.css'
+import './home.css'
 
 function groupVideosByGenre(videos) {
   const grouped = {}
