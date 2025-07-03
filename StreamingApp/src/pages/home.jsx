@@ -6,6 +6,7 @@ import Slider from 'react-slick'
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
 import './home.css'
+import LoadingIcon from '../components/LoadingIcon/LoadingIcon'
 
 function groupVideosByGenre(videos) {
   const grouped = {}
@@ -67,7 +68,7 @@ export default function Home() {
   const openModal = (video) => setModalVideo(video)
   const closeModal = () => setModalVideo(null)
 
-  if (loading) return <div>Cargando...</div>
+  if (loading) return <div className="loading-container"><LoadingIcon /></div>;
   if (error) return <div>Error: {error.message}</div>
 
   const grouped = groupVideosByGenre(videos)
