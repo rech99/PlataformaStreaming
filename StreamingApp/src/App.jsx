@@ -2,7 +2,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Layout from './layout/layout';
-import useVideos from './hooks/useVideos'; // Importa el hook
+import useVideos from './hooks/useVideos'; 
 import Home from './pages/home';
 import List from './pages/list';
 import VideoDetail from './pages/video_detail';
