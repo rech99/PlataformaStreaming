@@ -13,6 +13,7 @@ function useVideos() {
             id: '1',
             title: 'Clair Obscur',
             director: 'Jane Doe',
+            genres: ['Drama', 'Thriller'],
             year: 2023,
             duration: '1h 45min',
             reviews: [
@@ -27,6 +28,7 @@ function useVideos() {
             id: '2',
             title: 'Terminator 2: Judgment Day',
             director: 'James Cameron',
+            genres: ['Ciencia Ficción', 'Acción'],
             year: 1998,
             duration: '2h 17min',
             reviews: [
@@ -41,6 +43,7 @@ function useVideos() {
             id: '3',
             title: 'Inception',
             director: 'Christopher Nolan',
+            genres: ['Ciencia Ficción', 'Thriller'],
             year: 2010,
             duration: '2h 28min',
             reviews: [
@@ -55,6 +58,7 @@ function useVideos() {
             id: '4',
             title: 'The Matrix',
             director: 'Lana Wachowski, Lilly Wachowski',
+            genres: ['Ciencia Ficción', 'Acción'],
             year: 1999,
             duration: '2h 16min',
             reviews: [
@@ -69,6 +73,7 @@ function useVideos() {
             id: '5',
             title: 'Interstellar',
             director: 'Christopher Nolan',
+            genres: ['Ciencia Ficción', 'Aventura'],
             year: 2014,
             duration: '2h 49min',
             reviews: [
@@ -83,6 +88,7 @@ function useVideos() {
             id: '6',
             title: 'The Shawshank Redemption',
             director: 'Frank Darabont',
+            genres: ['Drama'],
             year: 1994,
             duration: '2h 22min',
             reviews: [
@@ -97,6 +103,7 @@ function useVideos() {
             id: '7',
             title: 'The Godfather',
             director: 'Francis Ford Coppola',
+            genres: ['Crimen', 'Drama'],
             year: 1972,
             duration: '2h 55min',
             reviews: [
@@ -111,6 +118,7 @@ function useVideos() {
             id: '8',
             title: 'Pulp Fiction',
             director: 'Quentin Tarantino',
+            genres: ['Crimen', 'Drama'],
             year: 1994,
             duration: '2h 34min',
             reviews: [
@@ -125,6 +133,7 @@ function useVideos() {
             id: '9',
             title: 'The Dark Knight',
             director: 'Christopher Nolan',
+            genres: ['Acción', 'Crimen'],
             year: 2008,
             duration: '2h 32min',
             reviews: [
@@ -139,6 +148,7 @@ function useVideos() {
             id: '10',
             title: 'Forrest Gump',
             director: 'Robert Zemeckis',
+            genres: ['Drama', 'Romance', 'Comedia'],
             year: 1994,
             duration: '2h 22min',
             reviews: [
@@ -153,6 +163,7 @@ function useVideos() {
             id: '11',
             title: 'Gladiator',
             director: 'Ridley Scott',
+            genres: ['Acción', 'Aventura'],
             year: 2000,
             duration: '2h 35min',
             reviews: [
@@ -167,6 +178,7 @@ function useVideos() {
             id: '12',
             title: 'The Silence of the Lambs',
             director: 'Jonathan Demme',
+            genres: ['Thriller', 'Crimen'],
             year: 1991,
             duration: '1h 58min',
             reviews: [
@@ -181,6 +193,7 @@ function useVideos() {
             id: '13',
             title: 'The Lord of the Rings: The Fellowship of the Ring',
             director: 'Peter Jackson',
+            genres: ['Aventura', 'Fantasía'],
             year: 2001,
             duration: '2h 58min',
             reviews: [
@@ -195,6 +208,7 @@ function useVideos() {
             id: '14',
             title: 'Fight Club',
             director: 'David Fincher',
+            genres: ['Drama', 'Thriller'],
             year: 1999,
             duration: '2h 19min',
             reviews: [
@@ -209,6 +223,7 @@ function useVideos() {
             id: '15',
             title: 'The Social Network',
             director: 'David Fincher',
+            genres: ['Drama'],
             year: 2010,
             duration: '2h 00min',
             reviews: [
@@ -223,6 +238,7 @@ function useVideos() {
             id: '16',
             title: 'The Grand Budapest Hotel',
             director: 'Wes Anderson',
+            genres: ['Comedia', 'Aventura'],
             year: 2014,
             duration: '1h 39min',
             reviews: [
@@ -237,6 +253,7 @@ function useVideos() {
             id: '17',
             title: 'Parasite',
             director: 'Bong Joon-ho',
+            genres: ['Drama', 'Thriller'],
             year: 2019,
             duration: '2h 12min',
             reviews: [
@@ -251,6 +268,7 @@ function useVideos() {
             id: '18',
             title: 'Spirited Away',
             director: 'Hayao Miyazaki',
+            genres: ['Animación', 'Fantasía'],
             year: 2001,
             duration: '2h 5min',
             reviews: [
@@ -265,6 +283,7 @@ function useVideos() {
             id: '19',
             title: 'The Lion King',
             director: 'Roger Allers, Rob Minkoff',
+            genres: ['Animación', 'Aventura', 'Drama', 'Comedia'],
             year: 1994,
             duration: '1h 28min',
             reviews: [
@@ -279,6 +298,7 @@ function useVideos() {
             id: '20',
             title: 'Back to the Future',
             director: 'Robert Zemeckis',
+            genres: ['Ciencia Ficción', 'Aventura'],
             year: 1985,
             duration: '1h 56min',
             reviews: [
@@ -292,7 +312,8 @@ function useVideos() {
             {
             id: '21',
             title: 'The Avengers',
-            director: 'Joss Whedon',  
+            director: 'Joss Whedon',
+            genres: ['Acción', 'Aventura', 'Ciencia Ficción'],
             year: 2012,
             duration: '2h 23min',
             reviews: [
