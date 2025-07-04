@@ -28,7 +28,7 @@ function useVideos() {
             id: '2',
             title: 'Terminator 2: Judgment Day',
             director: 'James Cameron',
-            genres: ['Ciencia Ficción', 'Acción'],
+            genres: ['Acción', 'Ciencia Ficción', ],
             year: 1998,
             duration: '2h 17min',
             reviews: [
@@ -43,7 +43,7 @@ function useVideos() {
             id: '3',
             title: 'Inception',
             director: 'Christopher Nolan',
-            genres: ['Ciencia Ficción', 'Thriller'],
+            genres: ['Ciencia Ficción', 'Romance', 'Thriller'],
             year: 2010,
             duration: '2h 28min',
             reviews: [
@@ -58,7 +58,7 @@ function useVideos() {
             id: '4',
             title: 'The Matrix',
             director: 'Lana Wachowski, Lilly Wachowski',
-            genres: ['Ciencia Ficción', 'Acción'],
+            genres: ['Acción', 'Ciencia Ficción', 'Romance'],
             year: 1999,
             duration: '2h 16min',
             reviews: [
@@ -73,7 +73,7 @@ function useVideos() {
             id: '5',
             title: 'Interstellar',
             director: 'Christopher Nolan',
-            genres: ['Ciencia Ficción', 'Aventura'],
+            genres: ['Aventura', 'Ciencia Ficción', ],
             year: 2014,
             duration: '2h 49min',
             reviews: [
@@ -148,7 +148,7 @@ function useVideos() {
             id: '10',
             title: 'Forrest Gump',
             director: 'Robert Zemeckis',
-            genres: ['Drama', 'Romance', 'Comedia'],
+            genres: ['Comedia', 'Drama', 'Romance', ],
             year: 1994,
             duration: '2h 22min',
             reviews: [
@@ -178,7 +178,7 @@ function useVideos() {
             id: '12',
             title: 'The Silence of the Lambs',
             director: 'Jonathan Demme',
-            genres: ['Thriller', 'Crimen'],
+            genres: ['Crimen', 'Thriller', ],
             year: 1991,
             duration: '1h 58min',
             reviews: [
@@ -238,7 +238,7 @@ function useVideos() {
             id: '16',
             title: 'The Grand Budapest Hotel',
             director: 'Wes Anderson',
-            genres: ['Comedia', 'Aventura'],
+            genres: ['Aventura', 'Comedia',],
             year: 2014,
             duration: '1h 39min',
             reviews: [
@@ -283,7 +283,7 @@ function useVideos() {
             id: '19',
             title: 'The Lion King',
             director: 'Roger Allers, Rob Minkoff',
-            genres: ['Animación', 'Aventura', 'Drama', 'Comedia'],
+            genres: ['Animación', 'Aventura', 'Comedia', 'Drama', ],
             year: 1994,
             duration: '1h 28min',
             reviews: [
@@ -298,7 +298,7 @@ function useVideos() {
             id: '20',
             title: 'Back to the Future',
             director: 'Robert Zemeckis',
-            genres: ['Ciencia Ficción', 'Aventura'],
+            genres: ['Aventura', 'Ciencia Ficción', ],
             year: 1985,
             duration: '1h 56min',
             reviews: [
