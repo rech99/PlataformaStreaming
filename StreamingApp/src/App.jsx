@@ -8,6 +8,9 @@ import List from './pages/list';
 import VideoDetail from './pages/video_detail';
 import SearchResults from './pages/search';
 import LoadingIcon from './components/LoadingIcon/LoadingIcon';
+import About from './pages/about';
+import Terms from './pages/terms';
+import Privacy from './pages/privacy';
 
 export default function App() {
   const { videos, loading, error } = useVideos();
@@ -32,6 +35,9 @@ export default function App() {
           <Route path="/lista" element={<List allVideos={videos} loading={loading} error={error} />} />
           <Route path="/pelicula/:id" element={<VideoDetail allVideos={videos} loading={loading} error={error} />} />
           <Route path="/search" element={<SearchResults allVideos={videos} loading={loading} error={error} />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/terms" element={<Terms />} />
+          <Route path="/privacy" element={<Privacy />} />
         </Route>
 
         <Route path="*" element={<h2>404 - Página no encontrada</h2>} />

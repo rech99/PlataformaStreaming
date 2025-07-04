@@ -44,7 +44,7 @@ export default function SearchBar({ videos = [] }) {
 
   const handleSelect = (video) => {
     setShowSuggestions(false)
-    setQuery('')  // Limpiar el input para que no se vuelvan a mostrar sugerencias
+    setQuery('') 
     setTimeout(() => {
       navigate(`/pelicula/${video.id}`)
     }, 0)

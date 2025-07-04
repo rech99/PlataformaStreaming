@@ -80,19 +80,16 @@ export default function VideoActionModal({ video, actionType, onConfirm }) {
     return formatted.substring(0, 5);
   };
 
-  // 4. Modificar el manejador de confirmación
+
   const handleConfirmAction = () => {
     if (validateForm()) {
-      // Si la validación es exitosa, llama a la función onConfirm pasada por props
       onConfirm();
     }
   };
 
-  // Función para formatear el número de tarjeta (opcional, para mejor UX)
+
   const formatCardNumber = (value) => {
-    // Elimina caracteres no numéricos
     const cleaned = value.replace(/\D/g, '');
-    // Agrupa cada 4 dígitos
     return cleaned.replace(/(\d{4})(?=\d)/g, '$1 ');
   };
 
