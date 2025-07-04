@@ -94,6 +94,7 @@ export default function VideoTable({ videos = [], loading = true, error = null }
   return (
     <>
     <div className="video-table__wrapper">
+      <br></br>
       <div className="video-table__controls">
         <div className="video-table__controls-left">
           <input
@@ -118,6 +119,7 @@ export default function VideoTable({ videos = [], loading = true, error = null }
           </select>
         </div>
       </div>
+      <br></br>
 
         {/* Tabla con los videos paginados y filtrados */}
         <table className="video-table">
