@@ -12,7 +12,6 @@
   padding: 2rem;
   max-width: 900px;
   margin: 2rem auto; /* Margen auto para centrar horizontalmente */
-  font-family: 'Inter', sans-serif;
   background-color: #121212; /* fondo oscuro */
   border-radius: 12px;
   box-shadow: 0 0 25px rgba(255, 0, 0, 0.5); /* sombra roja suave */
@@ -25,15 +24,12 @@
   text-align: center; 
 }
 
-.vd-year {
-  font-weight: 400;
-  color: #bbb;
-  font-size: 1.5rem;
-}
+
 
 .vd-director,
-.vd-duration {
-  font-size: 1rem;
+.vd-duration,
+.vd-year {
+  font-size: 1.25rem;
   margin-bottom: 0.3rem;
   color: #ccc;
   text-align: center; /* centra el texto debajo del título */

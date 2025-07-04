@@ -79,13 +79,13 @@ export default function VideoDetail() {
     reviews,
     synopsis,
     thumbnail,
-    url,
   } = video
 
   return (
     <div className="vd-container">
       <div className="vd-header">
-        <h1>{title} <span className="vd-year">({year})</span></h1>
+        <h1>{title} </h1>
+        <p className="vd-year"><strong>Año:</strong>{year}</p>
         <p className="vd-director"><strong>Director:</strong> {director}</p>
         <p className="vd-duration"><strong>Duración:</strong> {duration}</p>
       </div>
