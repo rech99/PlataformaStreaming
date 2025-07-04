@@ -116,6 +116,8 @@ export default function VideoTable({ videos = [], loading = true, error = null }
             <option value="title-desc">Título Z → A</option>
             <option value="genre-asc">Género A → Z</option>
             <option value="genre-desc">Género Z → A</option>
+            <option value="year-asc">Año ↑</option>
+            <option value="year-desc">Año ↓</option>
           </select>
         </div>
       </div>
@@ -126,23 +128,17 @@ export default function VideoTable({ videos = [], loading = true, error = null }
           <thead className="video-table__head">
             <tr className="video-table__row">
               <th className="video-table__header">Título</th>
-              <th className="video-table__header">Imagen</th>
+              <th className="video-table__header">Año</th>
               <th className="video-table__header">Género</th>
               <th className="video-table__header">Sinopsis</th>
               <th className="video-table__header">Acciones</th>
             </tr>
           </thead>
           <tbody>
-            {paginatedVideos.map(({ id, title, thumbnail, genres, synopsis, url }) => (
+            {paginatedVideos.map(({ id, title, year, genres, synopsis, url }) => (
               <tr key={id} className="video-table__row">
                 <td className="video-table__cell">{title}</td>
-                <td className="video-table__cell">
-                  <img
-                    src={thumbnail}
-                    alt={`Miniatura de ${title}`}
-                    className="video-table__thumbnail"
-                  />
-                </td>
+                <td className="video-table__cell">{year}</td>
                 <td className="video-table__cell">{genres?.join(', ') || ''}</td>
                 <td className="video-table__cell">{synopsis}</td>
                 <td className="video-table__cell video-table__cell--actions">

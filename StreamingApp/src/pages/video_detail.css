@@ -28,7 +28,9 @@
 
 .vd-director,
 .vd-duration,
-.vd-year {
+.vd-year,
+.vd-language,
+.vd-cast {
   font-size: 1.25rem;
   margin-bottom: 0.3rem;
   color: #ccc;

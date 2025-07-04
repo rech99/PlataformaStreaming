@@ -79,6 +79,8 @@ export default function VideoDetail() {
     reviews,
     synopsis,
     thumbnail,
+    language, 
+    cast = [] 
   } = video
 
   return (
@@ -87,7 +89,9 @@ export default function VideoDetail() {
         <h1>{title} </h1>
         <p className="vd-year"><strong>Año:</strong>{year}</p>
         <p className="vd-director"><strong>Director:</strong> {director}</p>
+        <p className="vd-cast"><strong>Reparto:</strong> {cast.join(', ')}</p>
         <p className="vd-duration"><strong>Duración:</strong> {duration}</p>
+        <p className="vd-language"><strong>Idioma:</strong> {language}</p>
       </div>
 
       <div className="vd-main">
