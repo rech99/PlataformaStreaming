@@ -1,37 +1,56 @@
 import React, { useState, useEffect } from 'react';
 import { useSearchParams, useNavigate } from 'react-router-dom';
-import './search.css'; 
+import './search.css';
 
+function normalizeText(text) {
+  return text
+    .normalize('NFD')                 // descompone caracteres acentuados
+    .replace(/[\u0300-\u036f]/g, '') // elimina marcas diacríticas (acentos)
+    .toLowerCase();
+}
 
-export default function SearchResults({ allVideos = [] }) { // <--- Recibe allVideos aquí
+export default function SearchResults({ allVideos = [] }) {
   const [searchParams] = useSearchParams();
   const navigate = useNavigate();
-  const query = searchParams.get('query') || ''; // Obtiene el valor del parámetro 'query'
+  const query = searchParams.get('query') || '';
   const [filteredVideos, setFilteredVideos] = useState([]);
 
-  // useEffect para filtrar los videos cada vez que el 'query' o 'allVideos' cambien
   useEffect(() => {
     if (!query.trim()) {
       setFilteredVideos([]);
       return;
     }
 
-    const lowerCaseQueryWords = query.toLowerCase().trim().split(/\s+/);
+    const normalizedWords = normalizeText(query.trim()).split(/\s+/);
 
-    const filtered = allVideos.filter(video => {
-      const title = video.title.toLowerCase();
-      let lastIndex = -1;
+    const matchAllWords = (text) => {
+      if (!text) return false;
+      const normalizedText = normalizeText(text);
+      return normalizedWords.every(word => normalizedText.includes(word));
+    };
 
-      return lowerCaseQueryWords.every(word => {
-        const index = title.indexOf(word, lastIndex + 1);
-        if (index === -1) return false;
-        lastIndex = index;
-        return true;
-      });
+    const matchAllWordsInArray = (arr) => {
+      if (!Array.isArray(arr) || arr.length === 0) return false;
+      return arr.some(item => matchAllWords(item));
+    };
+
+    const results = [];
+
+    allVideos.forEach(video => {
+      if (matchAllWords(video.title)) {
+        results.push({ video, category: 'Título' });
+      } else if (matchAllWordsInArray(video.cast)) {
+        results.push({ video, category: 'Actor' });
+      } else if (video.language && matchAllWords(video.language)) {
+        results.push({ video, category: 'Idioma' });
+      } else if (matchAllWordsInArray(video.genres)) {
+        results.push({ video, category: 'Género' });
+      }
     });
 
-    setFilteredVideos(filtered);
-  }, [query, allVideos]); // <--- Dependencias cruciales para evitar bucle infinito
+    setFilteredVideos(results);
+
+  }, [query, allVideos]);
 
   const handleResultClick = (videoId) => {
     navigate(`/pelicula/${videoId}`);
@@ -47,11 +66,15 @@ export default function SearchResults({ allVideos = [] }) { // <--- Recibe allVi
 
       {filteredVideos.length > 0 ? (
         <ul className="search-results__list">
-          {filteredVideos.map(video => (
+          {filteredVideos.map(({ video, category }) => (
             <li
               key={video.id}
               className="search-results__item"
               onClick={() => handleResultClick(video.id)}
+              tabIndex={0}
+              onKeyDown={e => { if (e.key === 'Enter') handleResultClick(video.id) }}
+              role="button"
+              aria-pressed="false"
             >
               <img
                 src={video.thumbnail}
@@ -62,7 +85,7 @@ export default function SearchResults({ allVideos = [] }) { // <--- Recibe allVi
                 <h2 className="search-results__item-title">{video.title}</h2>
                 <p className="search-results__item-director">Director: {video.director}</p>
                 <p className="search-results__item-year">Año: {video.year}</p>
-                {/* Puedes añadir más información relevante aquí */}
+                <p className="search-results__item-category">Encontrado en: {category}</p>
               </div>
             </li>
           ))}
