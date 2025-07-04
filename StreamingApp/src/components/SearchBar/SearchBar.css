@@ -28,7 +28,7 @@
   border-bottom: 1px solid #444;
   color: #f5f5f5;
   width: 100%;
-  box-sizing: border-box; /* ¡clave para incluir padding en ancho */
+  box-sizing: border-box; 
 }
 
 .search-bar__suggestion-item:last-child {
@@ -39,7 +39,7 @@
 .search-bar__suggestion-item:focus {
   background-color: #44475a;
   outline: none;
-  width: 100%; /* asegúrate de que el hover cubra el 100% */
+  width: 100%;
 }
 
 .search-bar__suggestion-thumbnail {

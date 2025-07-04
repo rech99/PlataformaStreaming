@@ -12,23 +12,23 @@ export default function VideoModal({ video, onClose }) {
 
   return (
     <div
-      className="modal fade show"
-      tabIndex="-1"
-      style={{ display: 'block', backgroundColor: 'rgba(0, 0, 0, 0.5)' }}
+      className="video-modal"
       role="dialog"
       onClick={onClose}
     >
-      <div className="modal-dialog modal-dialog-centered modal-lg" onClick={e => e.stopPropagation()}>
-        <div className="modal-content bg-dark text-white">
-          <div className="modal-header border-0">
-            <h5 className="modal-title" style={{ color: '#e50914' }}>{title} ({year})</h5>
-            <button type="button" className="btn-close btn-close-white" onClick={onClose} aria-label="Cerrar modal"></button>
+      <div className="video-modal__dialog" onClick={e => e.stopPropagation()}>
+        <div className="video-modal__content">
+          <div className="video-modal__header">
+            <h5 className="video-modal__title">{title} ({year})</h5>
+            <button type="button" className="video-modal__close-btn" onClick={onClose} aria-label="Cerrar modal">×</button>
           </div>
-          <div className="modal-body">
-            <p>{synopsis}</p>
+
+          <div className="video-modal__body">
+            <p className="video-modal__synopsis">{synopsis}</p>
+
             {url.includes('youtube.com') ? (
               <iframe
-                className="w-100"
+                className="video-modal__video"
                 height="400"
                 src={`https://www.youtube.com/embed/${url.split('v=')[1]}`}
                 title={title}
@@ -36,12 +36,13 @@ export default function VideoModal({ video, onClose }) {
                 allowFullScreen
               ></iframe>
             ) : (
-              <video className="w-100" height="400" controls>
+              <video className="video-modal__video" height="400" controls>
                 <source src={url} />
                 Tu navegador no soporta video.
               </video>
             )}
-            <div className="mt-3 text-end">
+
+            <div className="video-modal__footer">
               <button className="video-modal__details-button" onClick={handleVerDetalles}>
                 Ver detalles
               </button>
