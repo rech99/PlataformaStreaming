@@ -1,8 +1,14 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 import './VideoModal.css'
 
 export default function VideoModal({ video, onClose }) {
-  const { title, url, year, synopsis } = video
+  const { id, title, url, year, synopsis } = video
+  const navigate = useNavigate()
+
+  const handleVerDetalles = () => {
+    navigate(`/pelicula/${id}`)
+  }
 
   return (
     <div
@@ -15,8 +21,8 @@ export default function VideoModal({ video, onClose }) {
       <div className="modal-dialog modal-dialog-centered modal-lg" onClick={e => e.stopPropagation()}>
         <div className="modal-content bg-dark text-white">
           <div className="modal-header border-0">
-            <h5 className="modal-title">{title} ({year})</h5>
-            <button type="button" className="btn-close btn-close-white" onClick={onClose}></button>
+            <h5 className="modal-title" style={{ color: '#e50914' }}>{title} ({year})</h5>
+            <button type="button" className="btn-close btn-close-white" onClick={onClose} aria-label="Cerrar modal"></button>
           </div>
           <div className="modal-body">
             <p>{synopsis}</p>
@@ -35,6 +41,11 @@ export default function VideoModal({ video, onClose }) {
                 Tu navegador no soporta video.
               </video>
             )}
+            <div className="mt-3 text-end">
+              <button className="video-modal__details-button" onClick={handleVerDetalles}>
+                Ver detalles
+              </button>
+            </div>
           </div>
         </div>
       </div>

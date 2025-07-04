@@ -116,14 +116,6 @@ export default function VideoDetail() {
             >
               Rentar
             </button>
-            <a
-              href={url}
-              target="_blank"
-              rel="noreferrer"
-              className="vd-watch-link"
-            >
-              Ver Trailer
-            </a>
           </div>
         </div>
       </div>
